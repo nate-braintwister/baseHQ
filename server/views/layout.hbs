@@ -4,25 +4,31 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>{{title}} | {{appName}}</title>
+		<title>{{pagetitle}} | {{appname}}</title>
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/css/libs/tether.min.css">
 		<link rel="stylesheet" href="/css/libs/bootstrap-flex.min.css">
 		<link rel="stylesheet" href="/css/style.min.css">
 	</head>
 	<body>
-		<header id="app-header">
-			<h1 class="logo">{{appName}}</h1>
-		</header>
-		<div id="app-content">
-			{{{body}}}
-		</div><!-- #page-content -->
-		<footer id="app-footer">
+		<div class="layout-wrapper">
+			<header id="app-header">
+				<h1 class="logo">{{appname}}</h1>
+			</header>
 			
-		</footer>
+			<div id="app-content">
+				{{{body}}}
+			</div><!-- #app-content -->
+
+			<footer id="app-footer">
+				
+			</footer>
+		</div><!-- .layout-wrapper -->
+
 		{{!-- scripts --}}
 		<script src="/js/libs/jquery.min.js"></script>
 		<script src="/js/libs/tether.min.js"></script>
 		<script src="/js/libs/bootstrap.min.js"></script>
 		<script src="/js/main.min.js"></script>
-	</body>
-</html>
+		</body>
+	</html>
