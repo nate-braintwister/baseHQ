@@ -1,12 +1,4 @@
 // ==================================================
-// COPY NPM DEPENDENCIES TO PACKAGE.JSON 
-// IN DEV DEPENDENCIES OR NPM INSTALL FROM TERMINAL
-// ==================================================
-npm install --save-dev gulp gulp-sass gulp-autoprefixer gulp-clean-css gulp-babel 
-gulp-jshint jshint gulp-uglify gulp-imagemin gulp-rename gulp-clean gulp-concat gulp-notify 
-gulp-cache gulp-livereload tiny-lr
-
-// ==================================================
 // LOAD PLUGINS
 // ==================================================
 var gulp = require('gulp'),
@@ -31,7 +23,7 @@ var gulp = require('gulp'),
 // STYLESHEET TASKS
 // ==================================================
 gulp.task('styles', function() {
-  return gulp.src('src/sass/styles.scss')
+  return gulp.src('src/sass/style.scss')
     .pipe(sass.sync({ style: 'expanded', }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('public/css'))

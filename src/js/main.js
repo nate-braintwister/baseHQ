@@ -1,0 +1,3 @@
+let newUser = {
+	name: 'username'
+};
