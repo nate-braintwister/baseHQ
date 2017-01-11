@@ -1,0 +1,35 @@
+@import "variables";
+
+.bg-strip{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	padding: 2rem 1rem;
+	margin: 1rem 0;
+}
+
+.dark-strip{
+	background-color: $theme-dark;
+	color: #fff;
+}
+
+footer{
+	background-color: $theme-dark;
+	padding: 2rem 1rem;
+	
+	.legal{
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+
+	a{
+		color: #fff;		
+	}
+}
+
+.wrapper{
+	display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}

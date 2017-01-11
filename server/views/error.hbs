@@ -1,3 +1,11 @@
-<h1>{{message}}</h1>
-<h2>{{error.status}}</h2>
-<pre>{{error.stack}}</pre>
+<header class="error-page-header">
+	<div class="container">
+		<h1 class="display-1 page-title">{{message}}</h1>
+	</div><!-- container -->
+</header><!-- page-header -->
+<div class="bg-strip dark-strip">
+	<div class="container">
+		<h2>{{error.status}}</h2>
+		<pre>{{error.stack}}</pre>
+	</div><!-- container -->
+</div><!-- bg-strip -->

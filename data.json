@@ -1,0 +1,59 @@
+{
+  "pages": {
+    "home": {
+      "title": "This is a title",
+      "summary": "This is a summary...",
+      "description": "This is a description...",
+
+      "media": {
+        "main_image": "./images/site_images/front_main.jpg",
+        "image_one": "./images/site_images/front_image.jpg",
+        "icons": [
+          "./images/other/24-hours.svg",
+          "./images/other/bed.svg",
+          "./images/other/briefcase.svg",
+          "./images/other/hotel.svg",
+          "./images/other/hotel2.svg",
+          "./images/other/map.svg",
+          "./images/other/open.svg"
+        ]
+      }
+
+    }
+  },
+  "locations": {
+    "hotel_name": "Boston Garden Hotel",
+    "hotel_details": {
+      "address": {
+        "street": "1245 Beacon Hill",
+        "city": "Boston",
+        "state_short": "MA",
+        "state_long": "Massachusetts",
+        "zip": "01801",
+        "map": {
+          "lat": "",
+          "long": ""
+        }
+      }
+    },
+    "rating": "4/5",
+    "title": "Experience Boston in the Fall",
+    "shortname": "boston_in_the_fall",
+    "summary": "This is the hotel summary",
+    "description": "",
+    "rooms_available": 33,
+    "media": {
+      "images": {
+        "main": "./images/hotels/boston/main.jpg"
+      },
+      "videos": {
+      }
+    },
+    "author": {
+      "username": "",
+      "shortname": "",
+      "date_submitted": "Date Goes Here"
+    }
+
+  }
+}

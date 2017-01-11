@@ -4,31 +4,62 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>{{pagetitle}} | {{appname}}</title>
-		<link rel="stylesheet" href="/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/libs/tether.min.css">
-		<link rel="stylesheet" href="/css/libs/bootstrap-flex.min.css">
-		<link rel="stylesheet" href="/css/style.min.css">
+		<title>{{page.title}} | {{appname}}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="/css/style.min.css">
 	</head>
-	<body>
+	<body class="{{page.slug}}">
 		<div class="layout-wrapper">
 			<header id="app-header">
-				<h1 class="logo">{{appname}}</h1>
-			</header>
-			
-			<div id="app-content">
-				{{{body}}}
-			</div><!-- #app-content -->
-
-			<footer id="app-footer">
+				<div class="wrapper">
+                    <img src="/images/site_images/logo.svg" alt="baseHQ logo" class="logo-img">
+					<h1><a href="/">{{appname}}</a></h1>
+					<span class="strapline">{{strapline}}</span>
+				</div><!-- wrapper -->
+				<nav class="navbar">
+					<a class="navbar-brand" href="/">{{appname}}</a>
+					<ul class="nav navbar-left">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/locations">Locations</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="/users/profile" class="nav-link dropdown-toggle" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
+							<div class="dropdown-menu" aria-labelledby="navDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+					</ul><!-- navbar-left -->
+					<ul class="nav navbar-right">
+						<li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+						<li class="nav-item"><a href="/login" class="nav-linkt">Login</a></li>
+					</ul><!-- navbar-right -->
+				</nav>
+				</header><!-- #app-header -->
 				
-			</footer>
-		</div><!-- .layout-wrapper -->
-
-		{{!-- scripts --}}
-		<script src="/js/libs/jquery.min.js"></script>
-		<script src="/js/libs/tether.min.js"></script>
-		<script src="/js/libs/bootstrap.min.js"></script>
-		<script src="/js/main.min.js"></script>
-		</body>
-	</html>
+				<div id="app-content">
+					{{{body}}}
+					</div><!-- #app-content -->
+					<footer id="app-footer">
+						<div class="legal">
+							<div class="copyright">&copy; {{currentYear}},
+								<a href="{{developer.url}}">{{developer.name}}</a>. All rights reserved.
+							</div>
+							<div class="privacy"><a href="/privacy" title="Site-wide Privacy Information">Privacy</a></div>
+						</div>
+						</footer><!-- #app-footer -->
+						</div><!-- .layout-wrapper -->
+						{{!-- scripts --}}
+						<script src="/js/libs/jquery.min.js"></script>
+						<script src="/js/libs/tether.min.js"></script>
+						<script src="/js/libs/bootstrap.min.js"></script>
+						<script src="/js/main.min.js"></script>
+					</body>
+				</html>

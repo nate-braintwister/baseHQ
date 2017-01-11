@@ -1,14 +1,18 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const express = require('express');
 
-var main = require('./server/routes/mainRt');
-var users = require('./server/routes/usersRt');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/baseHQ');
 
-var app = express();
+const path = require('path');
+//const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+
+const main = require('./server/routes/mainRt');
+const users = require('./server/routes/usersRt');
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'server', 'views'));
@@ -21,13 +25,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 // app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use('/', main);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  let err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -43,7 +48,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// Template global variables
 app.locals.appname = "baseHQ";
-
-
+app.locals.currentYear = new Date().getFullYear();
+app.locals.developer = {
+	name: 'Braintwister',
+	url: 'https://braintwister.io'
+};
+app.locals.data = require('./data.json');
+app.locals.strapline = 'Room Rental on a Global Scale';
 module.exports = app;

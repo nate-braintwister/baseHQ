@@ -4,3 +4,10 @@ module.exports.index = (req, res) => {
 		pagetitle: 'User Index Page'
 	});
 };
+
+// RENDER USER PROFILE LOGIC
+module.exports.profile = (req, res) => {
+	res.render('user/profile', {
+		pagetitle: 'Your Profile'
+	});
+};
