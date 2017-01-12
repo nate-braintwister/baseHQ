@@ -52,8 +52,8 @@ app.use(function(err, req, res, next) {
 app.locals.appname = "baseHQ";
 app.locals.currentYear = new Date().getFullYear();
 app.locals.developer = {
-	name: 'Braintwister',
-	url: 'https://braintwister.io'
+	name: 'Serenebula Appworks, LLC',
+	url: 'https://serenebula.braintwister.io'
 };
 app.locals.data = require('./data.json');
 app.locals.strapline = 'Room Rental on a Global Scale';

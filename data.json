@@ -7,16 +7,10 @@
 
       "media": {
         "main_image": "./images/site_images/front_main.jpg",
-        "image_one": "./images/site_images/front_image.jpg",
-        "icons": [
-          "./images/other/24-hours.svg",
-          "./images/other/bed.svg",
-          "./images/other/briefcase.svg",
-          "./images/other/hotel.svg",
-          "./images/other/hotel2.svg",
-          "./images/other/map.svg",
-          "./images/other/open.svg"
-        ]
+        "images":{
+          "character": "./images/site_images/characters/girl3-basehq.png",
+          "alt": "Girl Cartoon Character"
+        }
       }
 
     }

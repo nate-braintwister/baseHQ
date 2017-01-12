@@ -7,11 +7,14 @@
 
   form{
     .form-group{
-      width: 20rem;
-
+      // width: 20rem;
       input{
         padding: 1rem;
       }
+    }
+    .form-check{
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -40,11 +43,11 @@ form.home-search{
   }
   input{
     width: 40rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 1.5rem;
   }
   .btn{
-    padding: 1rem;
+    padding: 1rem 2rem;
     font-size: 1.5rem;
     border-color: #fff;
     background-color: #fff;

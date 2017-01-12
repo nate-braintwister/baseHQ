@@ -2,3 +2,12 @@
   width:100%;
   height: auto;
 }
+.character{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+  img{
+    
+  }
+}

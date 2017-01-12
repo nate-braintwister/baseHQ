@@ -12,6 +12,9 @@ router.get('/locations', ctrl.locations);
 // GET user login page
 router.get('/login', ctrl.login);
 
+// GET user registration page
+router.get('/register', ctrl.register);
+
 // GET privacy page
 router.get('/privacy', ctrl.privacy);
 

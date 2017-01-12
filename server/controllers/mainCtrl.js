@@ -3,14 +3,20 @@ module.exports.home = (req, res) => {
 	res.render('index', {
 		page: {
 			title: 'Welcome to baseHQ',
-			slug: 'home'
-		}
+			slug: 'home',
+			intro: 'A completely re-energized way of finding your perfect roommate -- Whether you\'re looking for somewhere local, or somewhere much, much further away (no, we don\'t cover Mars, yet :\'( ).',
+			callToAction: 'Sign up now and see why Kathy here loves to use BaseHQ. Everyone should be like Kathy.',
+			article:{
+					title: 'This is the first article title',
+					content: 'This is the first article content'
+				}
+			}
 	});
 };
 
-// RENDER 
+// RENDER LOCATIONS PAGE LOGIC
 module.exports.locations = (req, res) => {
-	res.render('default', {
+	res.render('image-grid', {
         page: {
             title: 'Locations',
             slug: 'locations'
@@ -25,6 +31,16 @@ module.exports.login = (req, res) => {
             title: 'Login',
             slug: 'login'
         }
+	});
+};
+
+// RENDER USER REGISTRATION PAGE LOGIC
+module.exports.register = (req, res) => {
+	res.render('register', {
+		page: {
+			title: 'Sign Up!',
+			slug: 'sign_up'
+		}
 	});
 };
 

@@ -1,10 +1,13 @@
 body.home #app-header{
+	background-color: transparent;
+	padding: 0;
 	position: fixed;
 	width: 100%;
 	color: #fff;
 	z-index: 2;
 	.wrapper{
 		justify-content:center;
+		display: flex;
 
 		h1{
 			font-size: 6.5rem;
@@ -17,7 +20,8 @@ body.home #app-header{
 
 }
 header#app-header{
-	
+	background-color: darkcyan;
+  
 
 	h1{
 		padding: 1rem;
@@ -27,6 +31,7 @@ header#app-header{
 		font-size: 2rem;
 		a{
 			color: #fff;
+			text-decoration: none;
 		}
 
 	}
@@ -42,6 +47,11 @@ header#app-header{
 .page-header{
 	overflow: hidden;
 }
+.wrapper{
+	display: none;
+    flex-flow: row wrap;
+    align-items: center;
+}
 
 .page-header{
 	background: url('../public/images/site_images/front-image.jpg');
@@ -51,16 +61,14 @@ header#app-header{
 	padding: 0 1rem;
 }
 .scroll-head{
-
 	position: absolute;
 	top: -5rem;
 }
 
 .fixed{
-	tranition: .5s all ease;
+	transition: .5s all ease;
 	position: fixed;
 	top: 0 !important;
 	width: 100%;
 	padding:1rem 0;
 }
-

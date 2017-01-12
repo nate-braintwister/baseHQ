@@ -1,3 +1,25 @@
 body{
 	background-color: $theme-light;
+	font-size: 1.3rem;
+}
+.layout-wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	#app-content{
+		flex: 1;
+	}
+}
+
+.copy{
+	display: flex;
+	flex-flow: row wrap;
+
+	.character{
+		margin: auto;
+	}
+}
+small{
+	font-size: 0.9rem;
 }

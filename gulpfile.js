@@ -12,7 +12,6 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
     lr = require('tiny-lr'),
@@ -33,8 +32,7 @@ gulp.task('styles', function() {
       console.log(details.name + ": " + details.stats.minifiedSize);
       }))
     .pipe(livereload(server))
-    .pipe(gulp.dest('public/css'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(gulp.dest('public/css'));
 });
 
 
@@ -44,7 +42,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   return gulp.src('src/js/**/*.js')
     .pipe(babel({
-        presets: ['es2015']        
+        presets: ['es2015']
     }))
     //.pipe(jshint())
     //.pipe(jshint.reporter('default'))

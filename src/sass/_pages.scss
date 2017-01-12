@@ -1,0 +1,10 @@
+#app-content{
+  padding: 3.5rem 0rem;
+
+  .page-header{
+    margin-top: 2rem;
+  }
+}
+body.home #app-content{
+  padding: 0;
+}

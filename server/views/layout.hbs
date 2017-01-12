@@ -5,19 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>{{page.title}} | {{appname}}</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <link rel="stylesheet" href="/css/style.min.css">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js" charset="utf-8"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js" charset="utf-8"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js" charset="utf-8"></script>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+      <link rel="stylesheet" href="/css/style.min.css">
 	</head>
 	<body class="{{page.slug}}">
 		<div class="layout-wrapper">
 			<header id="app-header">
 				<div class="wrapper">
-                    <img src="/images/site_images/logo.svg" alt="baseHQ logo" class="logo-img">
+          <img src="/images/site_images/logo.svg" alt="baseHQ logo" class="logo-img">
 					<h1><a href="/">{{appname}}</a></h1>
 					<span class="strapline">{{strapline}}</span>
 				</div><!-- wrapper -->
 				<nav class="navbar">
-					<a class="navbar-brand" href="/">{{appname}}</a>
+					<a class="navbar-brand" href="/"><img src="/images/site_images/logo.svg" alt="baseHQ logo" class="logo-img"> {{appname}}</a>
 					<ul class="nav navbar-left">
 						<li class="nav-item active">
 							<a class="nav-link" href="#">Home</a>
@@ -38,22 +41,22 @@
 						</li>
 					</ul><!-- navbar-left -->
 					<ul class="nav navbar-right">
-						<li class="nav-item"><a href="#" class="nav-link">Register</a></li>
-						<li class="nav-item"><a href="/login" class="nav-linkt">Login</a></li>
+						<li class="nav-item"><a href="/register" class="nav-link">Register</a></li>
+						<li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
 					</ul><!-- navbar-right -->
 				</nav>
 				</header><!-- #app-header -->
-				
+
 				<div id="app-content">
 					{{{body}}}
 					</div><!-- #app-content -->
 					<footer id="app-footer">
-						<div class="legal">
+						<small class="legal">
 							<div class="copyright">&copy; {{currentYear}},
-								<a href="{{developer.url}}">{{developer.name}}</a>. All rights reserved.
+								<a href="{{developer.url}}">{{developer.name}}</a>, All rights reserved.
 							</div>
 							<div class="privacy"><a href="/privacy" title="Site-wide Privacy Information">Privacy</a></div>
-						</div>
+						</small>
 						</footer><!-- #app-footer -->
 						</div><!-- .layout-wrapper -->
 						{{!-- scripts --}}
@@ -61,5 +64,6 @@
 						<script src="/js/libs/tether.min.js"></script>
 						<script src="/js/libs/bootstrap.min.js"></script>
 						<script src="/js/main.min.js"></script>
+						<script src="/js/react/app.jsx"></script>
 					</body>
 				</html>
