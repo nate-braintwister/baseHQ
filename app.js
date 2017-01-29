@@ -2,12 +2,21 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/baseHQ');
+const db = mongoose.connection;
+
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
+const session = require('express-session');
 
 const path = require('path');
 //const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
 
 const main = require('./server/routes/mainRt');
 const users = require('./server/routes/usersRt');

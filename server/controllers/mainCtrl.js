@@ -24,6 +24,26 @@ module.exports.locations = (req, res) => {
 	});
 };
 
+// RENDER SEARCH FORM LOGIC
+module.exports.search = (req, res) => {
+	res.render('search-form', {
+		page: {
+			title: 'Search For Your Perfect Room',
+			slug: 'search-for-a-room'
+		}
+	});
+};
+
+// RENDER BROWSE ROOMS PAGE LOGIC
+module.exports.browse = (req, res) => {
+	res.render('image-grid', {
+		page: {
+			title: 'Take a look at some of the rooms available around the world now!',
+			slug: 'browse-rooms'
+		}
+	});
+};
+
 // RENDER USER LOGIN PAGE LOGIC
 module.exports.login = (req, res) => {
 	res.render('user/login', {
